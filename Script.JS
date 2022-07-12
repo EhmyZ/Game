@@ -58,7 +58,7 @@ function showResult(score, playerChoice, computerChoice) {
   // Don't forget to grab the div with the 'result' id!
  const resultDiv = document.getElementById('result')
  const handsDiv = document.getElementById('hands')
- const playerScoreDiv = document.getElementById(' playerScore')
+ const playerScoreDiv = document.getElementById('player-score')
 
   if (score == -1) {
     resultDiv.innerText = 'You Lose!'
@@ -69,7 +69,10 @@ function showResult(score, playerChoice, computerChoice) {
   }
   handsDiv.innerText = `Player ${playerChoice} VS Computer ${computerChoice}`
   
-  playerScoreDiv.innerText = totalScores.playerScore
+
+
+  playerScoreDiv.innerText = "Your Score is:" + totalScores.playerScore
+ /*  playerScoreDiv.innerText = `Your Score is: ${totalScores.playerScore}` */
 }
 
 // ** Calculate who won and show it on the screen **
@@ -116,7 +119,7 @@ function endGame() {
  
   const resultDiv = document.getElementById('result')
   const handsDiv = document.getElementById('hands')
-  const playerScoreDiv = document.getElementById(' playerScore')
+  const playerScoreDiv = document.getElementById('player-score')
 
   resultDiv.innerText = ''
   handsDiv.innerText = ''
